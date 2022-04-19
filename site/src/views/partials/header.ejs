@@ -1,0 +1,38 @@
+    <header>
+        <nav class="header-nav">           
+            <ul class="menu">
+                <li class="logo"> <a href="/" ><img id= "idLogo"  src="/img/Logo01.svg" alt="OneBigBox"> </a> 
+                <li class="items"><a href="/planes">Planes</a></li>
+                <li class="items"><a href="/recetas">Recetas</a></li>
+                <li class="items"><a href="/howtouse">Como funciona?</a></li>
+                <li class="items"><a href="/nosotros">Nosotros</a></li>
+                <% if (locals.user) { %>
+                    <li class="user"><a href="/user"><img class="img-user-avatar" src="/img/avatar/<%= locals.user.avatar %>" alt="user-avatar"></a></li>
+                <% } else { %>
+                    <li class="user"><a href="/user"><i class="far fa-user"></i></a></li>
+                <% } %> 
+                <!-- Comento los favoritos hasta que tenga funcionalidad -->
+                <!--<li class="user"><a href="#"><i class="far fa-heart"></i></a></li>-->
+                <% if (locals.user) { %>
+                    <li class="user"><a href="/cart"><i class="fas fa-shopping-basket"></i></a></li>
+                <% } %>
+                <% if (locals.user) { %>
+                    <li class="user"><a href="/user/logout"><i class="fas fa-sign-out-alt"></i></a></li>
+                <% } %>
+                <% if (locals.user.admin) { %>
+                    <li class="user"><a href="/admin"><i class="fas fa-user-cog"></i></a></li>
+                <% } %>
+                <li class="menu-btn"><a href="#"><i class="fas fa-bars"></i></a></li>
+                
+            </ul>
+        </nav>
+        <script>
+            $(document).ready(function(){
+                $('.menu-btn').click(function(){
+                    $('.items').toggleClass('show');
+                    $('.user').toggleClass('show');
+                    $('ul li').toggleClass('hide');
+                })
+            })
+        </script>
+    </header>

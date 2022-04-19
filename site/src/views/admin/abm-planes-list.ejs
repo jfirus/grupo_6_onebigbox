@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Include Head -->
+<%- include('../partials/head', {title: 'Listado de Planes'}) %>
+
+<body>
+    <!-- Header -->
+	<%- include('../partials/header-admin') %>
+	<!-- /Header -->
+    <section>
+
+    <div class="list-header">
+        <h1>PLANES</h1>
+        <a href="./planes/abm-planes-alta" class="admin-btn admin-create"><i class="fas fa-plus"></i>Crear Plan</a>
+    </div>
+
+    <main class="admin-list">
+        <% planes.forEach(plan => { %>
+            <div class="admin-item">
+                <div class="admin-info">                    
+                    <img src="/img/planes/<%= plan.image %> " alt="plan_image">
+                    <h2><%= plan.plan %></h2>
+                </div>
+                <div class="admin-actions">
+                    <a href="/admin/planes/abm-planes-modificacion/<%= plan.id %>" class="admin-btn admin-modify"><i class="fas fa-edit"></i>Modificar</a>
+                    <form action="/admin/planes/eliminar-plan/<%= plan.id %>" method="POST" class="admin-btn admin-delete btn-eliminar">
+                        <i class="fas fa-trash-alt"></i>
+                        <input type="submit" value="Eliminar">   
+                    </form>
+                </div>
+            </div>
+        <% }) %>  
+    </main>
+        
+    </section>
+    <script src="/js/script.js"></script>
+</body>
+</html>

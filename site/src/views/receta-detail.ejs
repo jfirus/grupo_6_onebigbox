@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Include Head -->
+<%- include('partials/head', {title: 'Listado de Recetas'}) %>
+
+<body>
+    <!-- Encabezado  -->
+    <%- include('partials/header') %>
+    <!-- Encabezado  -->
+    <section class="nuestros-box">
+
+         <!-- Separo en un array los ingredientes y los pasos para luego recorrerlo  -->
+        <% let ingredientes = receta.ingredientes.split('|');%>
+        <% let pasos = receta.pasos.split('|'); %>          
+
+            <div class="detalle-receta-conteiner" >
+                <img src= "/img/recetas/<%- receta.image %>" alt= <%- receta.plan %> >
+            
+                <div class ="detalle-receta-content" >
+                    <div>
+                        <h2 class = "detalle-receta-titulo"><%- receta.titulo %></h2>
+                    </div>
+                    <div >
+                        <p class = "detalle-receta-description"><%- receta.description %></p>
+                    </div>
+                    <div>
+                        <h2 class = "detalle-receta-subtitulo">Ingredientes</h2>
+                        <ul>
+                            <% ingredientes.forEach(element => { %>
+                                <li class="detalle-receta-description"> <%-element %>  </li>
+                            <% }) %>
+                          
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class = "detalle-receta-subtitulo">Pasos</h2>
+                        <ul>
+                            <% pasos.forEach(element => { %>
+                                <li class="detalle-receta-description"> <%-element %>  </li>
+                            <% }) %>
+                            
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class = "detalle-receta-subtitulo">Tiempo de Cocción</h2>
+                        <p class = "detalle-receta-description"><%- receta.tiempopreparacion %></p>
+                    </div>
+
+                    <% if (locals.user) { %>
+                        <form action="/cart/addRecipe/<%= receta.id %>" method="POST" class="add-recipe-cart">
+                            <button type="submit">Agregar al carrito</button>
+                        </form>
+                    <% }else{ %>
+                        <a href="/recetas" class="btn-home btn-d-block btn-naranja">Ver todas las Recetas</a>
+                    <% } %>
+
+
+
+                    
+                </div>
+            </div>
+    </section>   
+    <!-- footer -->
+	<%- include('partials/footer') %>
+	<!-- /footer -->
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Include Head -->
+<%- include('partials/head', {title: 'Planes'}) %>
+
+<body>
+    <!-- Header -->
+	<%- include('partials/header') %>
+    <!-- /Header -->
+
+    <!-- EL PLAN SOLICITADO POR ID -->
+    <main>
+ 
+        <div class="container-receta" >
+        
+            <div >
+                <img src= "/img/planes/<%- plan.image %>" alt= <%- plan.plan %> >
+                
+            </div>
+            <div >
+                <ul>
+                    <li class="title"><%- plan.plan %> </li>
+                    <li class="precio">Precio Total del plan: <%- precioTotal %>  </li>
+                    <li class="description"> <%- plan.description %> </li>
+                    <li class="incluye">Incluye: Ingredientes medidos + Recetas. Platos completos y equilibrados. Postres saludables</li>
+                    <li class="cantidad"> Cantidad Recetas que contiene el Plan:  <%- plan.receta.length %> </li>
+
+                    <li class="envios">Envios Gratis</li>
+                    
+                </ul>
+
+                <ul>
+                    <form method="POST" class="recetas-boton-carrito" action="/cart/agregarAlCarrito/<%- plan.id %>" >
+                        <button type="submit" class="btn-home btn-d-block btn-naranja">Agregar al carrito  </button>
+                    </form>
+                </ul>
+            </div>
+        </div>
+    </main>
+    
+    <% if (plan.receta.length>0) { %>
+        
+        <!-- Listado de Recetas Pertenecientes al Plan que se está buscando-->
+        <section class="nuestros-box">
+            <div>
+                <h2 class="title">Recetas del Plan</h2>
+            </div>
+            <main class="boxes lista-boxes">
+                <% plan.receta.forEach(receta => { %>
+                
+                    <div class="box box-full">
+                        <ul>
+                            <li><img src="/img/recetas/<%= receta.image %> " alt=""></li>
+                            <li class="title"><%= receta.titulo %></li>
+                            <li class="description"><%= receta.description %> </li>
+                            <li><a href="#" class="btn-home btn-d-block btn-naranja">SELECCIONAR RECETA</a></li>
+                        </ul>
+                    </div>
+
+                <% }) %>
+                
+            </main>
+        </section>
+    <% }else{%>
+        <div class="error">
+            <h2">Este Plan no tiene cargadas recetas aún </h2>
+        </div>
+
+    <% } %>   
+    <!-- footer -->
+	<%- include('partials/footer') %>
+	<!-- /footer -->
+</body>
+</html>

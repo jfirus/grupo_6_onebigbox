@@ -1,0 +1,1948 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+/* ESTILOS GLOBALES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+:root {
+    --light-grey: #f5f5f5;
+    --dark-grey: #707070;
+    --dark-blue: #303c6c;
+    --orange: #f4976c;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    color: var(--dark-blue);
+    background-color: var(--light-grey);
+}
+
+img {
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 10px;
+    z-index: 1;
+}
+
+.btn {
+    padding: 10px 30px;
+    border-radius: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    color: #ffffff;
+    transition: ease-in-out .2s;
+}
+
+.btn-d-block {
+    display: block;
+}
+
+.btn-naranja {
+    background-color: var(--orange);
+}
+
+.btn-naranja:hover {
+    background-color: #db7a4d;
+}
+/* ESTILOS GLOBALES */
+
+
+/* HOMEPAGE Y PLANES */
+ .slogan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    margin: auto 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 15px;
+    margin-right: 50px;
+}
+
+.slogan li {
+    margin-bottom: 10px;
+}
+
+.btn-home {
+    padding: 5px 20px;
+    border-radius: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    color: #ffffff;
+    transition: ease-in-out .2s;
+    margin: 5% 10%;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-d-block {
+    display: flex;
+}
+
+.btn-naranja {
+    background-color: var(--orange);
+}
+
+.btn-naranja:hover {
+    background-color: #db7a4d;
+}
+
+.background {
+    display: flex;
+    justify-content: flex-end;
+    box-sizing: border-box;
+    background: url(/img/home.png);
+    background-size: cover;
+    background-position: bottom;
+    width: 100%;
+    height: 600px;
+    
+}
+section {
+    margin-bottom: 30px;
+}
+
+section ul li.title {
+    color: var(--dark-blue);
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+}
+
+section ul li.description {
+    font-size: 11px;
+    color: var(--dark-blue);
+    text-align: center;
+    padding: 0 12px;
+}
+
+.boxes {
+    display: flex;
+    flex-direction: row;
+}
+.home-planes {
+    width: 100%;
+    margin: 30px 0;
+}
+.lista-boxes {
+    flex-wrap: wrap;
+    margin: 30px 100px;
+}
+
+.box img{
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+
+.box {
+    display: flex;
+    border-radius: 20px;
+    box-shadow: 0px 20px 34px -20px var(--dark-grey);
+    justify-content: center;
+    align-content: center;
+    background-color: white;
+}
+
+.plan-home {
+    width: 30%;
+    margin-right: 20px;
+    flex-grow: 1;
+}
+
+.box-full {
+    width: 40%;
+    margin: 5%;
+}
+
+.plan-home:first-child {
+    margin-left: 10px;
+}
+
+.plan-home:last-child {
+    margin-right: 10px;
+}
+
+.center {
+    flex-grow: 2;
+}
+
+.button {
+    padding: 10px 30px;
+    border-radius: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--orange);
+    border: 3px solid var(--orange);
+    transition: ease-in-out .2s;
+    
+}
+
+.view-all {
+    display: flex;
+    justify-content: center;
+}
+
+.button:hover {
+    background-color: #db7a4d;
+    color: white;
+    border: 3px solid #db7a4d;
+}
+
+.instructive {
+    display: flex;
+    margin: 30px;
+}
+
+.instructive ul.steps {
+    margin-left: 15%;
+    width: 25%;
+    justify-content: center;
+}
+
+.instructive ul.steps:first-child {
+    margin-left: 0;
+}
+
+.instructive ul li img {
+    width: 100%;
+}
+
+.admin-btn {
+    padding: 5px 15px;
+    border-radius: 30px;
+    color: white;
+    font-size: 13px;
+    cursor: pointer;
+    height: 30px;
+}
+
+.admin-btn input[type="submit"] {
+    border: none;
+    color: white;
+    font-size: 13px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.admin-btn input[type="submit"]:focus {
+    outline: none;
+}
+
+.admin-btn i {
+    margin-right: 7px;
+}
+
+.admin-btn.admin-create {
+    background-color: #7cd07c;
+}
+
+main.admin-list .admin-btn.admin-modify {
+    background-color: var(--orange);
+}
+
+main.admin-list .admin-btn.admin-delete {
+    background-color: #ff5656;
+}
+
+.list-header {
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list-header h1 {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+main.admin-list {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto 20px auto;
+    padding: 0 20px;
+}
+
+main.admin-list .admin-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #a2a2a2;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 5px 0;
+    transition: .3s;
+}
+
+main.admin-list .admin-item:hover {
+    background-color: #dcdcdc;
+}
+
+main.admin-list .admin-item .admin-info,
+main.admin-list .admin-item .admin-actions {
+    display: flex;
+    align-items: center;
+}
+
+main.admin-list .admin-item .admin-actions a {
+    margin-right: 20px;
+}
+
+main.admin-list .admin-item .admin-info img {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    object-fit: cover;
+    object-position: center;
+    border: 1px solid #d2d2d2;
+    margin-right: 20px;
+}
+
+main.admin-list .admin-item .admin-info h2 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+main.admin-list .admin-item .admin-info h3 {
+    font-size: 14px;
+    font-weight: 400;
+}
+main.admin-list .admin-item .admin-info h4 {
+    font-size: 12px;
+    font-weight: 400;
+}
+/* HOMEPAGE Y PLANES */
+
+
+/* DETALLE PLAN */
+
+.container-receta{
+    display: flex;
+    flex-direction: row;
+    background: white;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0,3);
+    border-radius: 3px;
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+}
+.container-receta img {
+    border-radius: 20px;
+}
+
+.container-receta div{
+    width: 50%;
+    padding: 10px;
+    align-items: left;
+}
+
+.container-receta div ul li{
+    padding: 2%;
+    font-size: 14px;
+}
+.container-receta div .title {
+    font-size: 18px;
+    margin: 0;
+    font-weight: bold;
+}
+.container-receta div .cantidad .label {
+    font-size: 14px;
+    margin: 0;
+    
+}
+.conteiner-receta div .precio {
+    margin: 0;
+    font-weight: bold;
+}
+
+.container-receta input[type="number"] {
+    margin-left: 15px;
+    padding: 3px 10px;
+    width: 50px;
+    height: 30px;
+    border: 1px solid var(--dark-grey);
+    border-radius: 5px;
+}
+.container-receta div .envios {
+    font-size: 10px;
+    margin: 0;
+
+}
+.recetas-boton-carrito{
+    vertical-align: bottom;
+    bottom:0px;
+    right:0px;
+}
+h2.title {
+    display: flex;
+    justify-content: center;
+}
+
+/* DETALLE PLAN */
+
+/* NOSOTROS*/
+.container-nosotros{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0,3);
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 80%;
+    margin-top: 20px;
+}
+.container-nosotros h2{
+    padding: 2%;
+    
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.container-nosotros p{
+    font-size: 12;
+    text-align: justify;
+    padding: 2%;
+    
+    position: relative;
+}
+/* NOSOTROS*/
+
+
+/**/
+.container-howtouse h2{
+    padding: 2%;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+/**/
+
+
+/* REGISTER */
+.page-bg-image {
+    background-image: url('../img/home.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+}
+
+.page-bg-image::after {
+    content: '';
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.6);
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.register-container {
+    padding: 50px 10px;
+}
+
+.register-page-title {
+    text-align: center;
+    margin: 0 0 40px 0;
+}
+
+.register-page-title h1 {
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 0 0 20px 0;
+}
+
+.register-page-title h2 {
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0;
+}
+.file{
+    position: relative;
+    display: inline-block;
+    font-size: 16px;
+    margin: 15px 0;
+    padding: 10px;
+    color: #acacac;
+    background-color: white;
+    border-radius: 8px;
+    text-align: center;
+    width: 100%;
+}
+#avatar {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.register-page-main form input {
+    display: block;
+    width: 100%;
+    margin: 15px 0;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.register-page-main form input:last-of-type {
+    margin-bottom: 0;
+}
+
+.register-page-main form input::placeholder {
+    color: #acacac;
+}
+
+.register-page-main form input[type="submit"] {
+    color: #fff;
+    background-color: var(--orange);
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: ease-in-out .3s;
+}
+
+.register-page-main form input[type="submit"]:hover {
+    transform: scale(1.1);
+}
+
+.register-page-main .register-separator {
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 300;
+    margin: 20px 0;
+}
+
+.register-page-main a.social-ntw-btn {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background-color: #fff;
+    color: var(--dark-blue);
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 16px;
+    border-radius: 8px;
+    padding: 10px 20px;
+    position: relative;
+    transition: ease-in-out .3s;
+}
+
+.register-page-main a.social-ntw-btn:hover {
+    transform: scale(1.1);
+}
+
+.register-page-main a.social-ntw-btn i {
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+}
+
+.register-page-main a.social-ntw-btn span {
+    font-weight: 600;
+}
+
+.register-page-main .social-methods-register h3 {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 40px 0 0 0;
+}
+
+.register-page-main .social-methods-register h3 a {
+    color: var(--dark-blue);
+    font-weight: 600;
+}
+/* REGISTER */
+
+
+
+/* Inicio Estilo LOGIN*/
+.login-container {
+    padding: 50px 10px;
+}
+
+.login-page-title {
+    text-align: center;
+    margin: 0 0 40px 0;
+}
+
+.login-page-title h1 {
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 0 0 20px 0;
+}
+.login-page-title h2 {
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0;
+}
+.login-page-main form input {
+    display: block;
+    width: 100%;
+    margin: 15px 0;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.login-page-main form input:last-of-type {
+    margin-bottom: 0;
+}
+
+.login-page-main form input[type="submit"] {
+    color: #fff;
+    background-color: var(--orange);
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: ease-in-out .3s;
+}
+.login-page-main form input[type="submit"]:hover {
+    transform: scale(1.1);
+}
+
+.login-page-main .login-separator {
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 300;
+    margin: 20px 0;
+}
+
+.login-page-main a.social-ntw-btn {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background-color: #fff;
+    color: var(--dark-blue);
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 16px;
+    border-radius: 8px;
+    padding: 10px 20px;
+    position: relative;
+    transition: ease-in-out .3s;
+}
+
+.login-page-main a.social-ntw-btn:hover {
+    transform: scale(1.1);
+}
+
+
+.login-page-main a.social-ntw-btn i {
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+}
+
+.login-page-main a.social-ntw-btn span {
+    font-weight: 600;
+}
+
+
+.loogin-page-main .social-methods-login h3 {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 40px 0 0 0;
+}
+
+.login-page-main .social-methods-login h3 a {
+    color: var(--dark-blue);
+    font-weight: 600;
+}
+
+/**** Para el estilo del check RECORDARME ****/
+.login-checkbox-rememberme {
+    display: inline-flex;
+    cursor: pointer;
+    position: relative;
+    padding-top: 5%;
+    padding-left: 2%;
+    }
+.login-checkbox-rememberme > label {
+    display: inline-block;
+    padding-left: 5%;
+}
+.login-checkbox-rememberme > input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    outline: none;
+    transition-duration: 0.3s;
+    cursor: pointer;
+    background: none;
+}
+#checkRecordarme{
+    margin-top: 0%;
+    border-radius: 0%;
+    border: 2px solid darkgrey;
+    padding-top: 2px;
+    padding-left: 8px;
+    padding-right: 7px;
+    padding-bottom: 2px;
+}
+
+.login-checkbox-rememberme > input:checked {
+   background-color: darkgrey;
+}
+
+.login-checkbox-rememberme > input:checked + span::before {
+    content: ' ';
+    display: inline-block;
+    text-align: center;
+    color: darkgrey;
+    position: absolute;
+    left: 0.7rem;
+    top: 0.2rem;
+}
+
+.login-checkbox-rememberme > input:active {
+    border: 2px solid darkgrey;
+    background: none;
+}
+
+/*** Fin del estilo del Check*/
+
+/*Fin del LOGIN*/
+
+/*DETALLE DE LA RECETA*/
+.detalle-receta-conteiner{
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: column wrap;
+    flex-flow: column wrap;
+    width: 100%;
+    
+}
+.detalle-receta-conteiner img {
+    height: 50%;
+    opacity: 80%;
+}
+.detalle-receta-content {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    /* border: 1px solid var(--dark-grey);*/
+    border-radius: 15px;
+    padding: 20px 20px;
+    margin-bottom: 40px;
+    max-width: 60%;
+    width: 60%; 
+    margin-left: 20%;
+  
+   }
+
+.detalle-receta-titulo {
+    color: var(--dark-blue);
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+}
+.detalle-receta-subtitulo {
+    font-size: 16px;
+    color: var(--dark-blue);
+    padding: 10px 12px;
+}
+
+.detalle-receta-description {
+    font-size: 11px;
+    color: var(--dark-blue);
+    padding: 5px 12px;
+    text-align: justify;
+}
+
+.add-recipe-cart button {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 10px auto;
+    background-color: var(--orange);
+    border: none;
+    border-radius: 15px;
+    color: #fff;
+    padding: 5px;
+    cursor: pointer;
+}
+/** FIN DEL DETALLE DE LA RECETA*/
+
+/* CARRITO */
+main.cart {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 1200px;
+}
+
+main.cart input[type="submit"] {
+    height: 40px;
+    width: 300px;
+    margin: auto 0;
+    border-radius: 30px;
+    background-color: var(--orange);
+    border: none;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+main.cart .cart-delete {
+    height: 40px;
+    width: 200px;
+    margin: auto 0;
+    border-radius: 30px;
+    border: none;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: #ff5656;
+}
+main.cart .item-delete {
+    height: 40px;
+    width: 50px;
+    margin: auto 0;
+    border-radius: 30px;
+    border: none;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: #ff5656;
+}
+main.cart h1 {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+main.cart h2 {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+main.cart .cart-titles p {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+main.cart .item-img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+}
+
+main.cart .item-info {
+    margin-left: 15px;
+}
+
+.content-padding {
+    padding: 20px 0;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.spc-btw {
+    justify-content: space-between;
+}
+
+.item-info a {
+    display: block;
+    margin: 10px 0;
+    color: var(--dark-blue);
+}
+
+.cart-item {
+    border-bottom: 1px solid var(--dark-blue);
+    padding: 20px 0;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.cart-item:last-of-type {
+    border-bottom: none;
+}
+
+.item-info a i {
+    margin-right: 10px;
+}
+
+.item-info span {
+    margin-right: 10px;
+}
+
+.item-info input[type="number"] {
+    width: 50px;
+    border: 1px solid var(--dark-blue);
+    padding: 2px 10px;
+    border-radius: 10px;
+}
+
+.item-price {
+    min-width: 200px;
+    font-size: 18px;
+    font-weight: 500;
+    margin: auto 0;
+}
+
+.item-unit-price {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #c2c2c2;
+    padding-bottom: 15px;
+}
+
+.item-subtotal-price {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+}
+/* CARRITO */
+
+
+/* HEADER */
+.header-nav{
+    background-color: transparent;
+    padding: 5px 40px;
+    border-bottom: 0.5px solid rgba(15, 12, 72, 0.297);
+}
+
+.header-nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-nav ul li {
+    padding: 15px 0;
+    cursor: pointer;
+}
+
+.header-nav ul li.items {
+    
+    width: auto;
+    margin: 0 16px;
+    text-align: center;
+    text-transform: uppercase;
+    order: 3;
+}
+
+.header-nav ul li.logo {
+    flex: 1;
+    color: var(--dark-blue);
+    cursor: default;
+    user-select: none;
+    max-width: 800px;
+}
+
+#idLogo{
+    color: var(--dark-blue);
+    user-select: none;
+    font-size: 25px;
+    width: 30%;
+    height: 30%;
+}
+
+#idLogoFooter{
+    width: 100%;
+    height: 100%;
+    
+}
+.header-nav ul li.user {
+    width: auto;
+    margin: 0 5px;
+    order: 4;
+    font-size: 10px;
+}
+
+.header-nav ul li.user .img-user-avatar {
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border: 2px solid var(--dark-blue);
+    transition: ease-in-out .3s;
+}
+
+.header-nav ul li.user .img-user-avatar:hover {
+    -webkit-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75);
+}
+
+.header-nav ul li a {
+    color: var(--dark-blue);
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.header-nav ul li i {
+    font-size: 23px;
+}
+
+.header-nav ul li.menu-btn {
+    display: none;
+}
+
+.header-nav ul li.menu-btn.hide i:before{
+    content: '\f00d';
+}
+/* HEADER */
+
+
+/* FOOTER */
+footer {
+    background-color: white;
+    color: var(--dark-blue);
+}
+
+.container-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 40px;
+    list-style-type: none;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-footer div ul {
+    list-style-type: none;
+}
+
+.container-footer div ul li a {
+    text-decoration: none;
+    color: var(--dark-blue);
+}
+
+.column1-footer {
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.column1-footer ul {
+    display: flex;
+    
+}
+.column1-footer h1 {
+    font-size: 45px;
+}
+
+.column1-footer ul li {
+    padding: 23px;
+}
+
+.fab.fa-facebook-square {
+    color: #3b5998;
+}
+.fab.fa-twitter-square {
+    color: #00acee;
+}
+.fab.fa-instagram {
+    color: #dd2a7b;
+}
+.fab.fa-whatsapp-square {
+    color: #4fce5d;
+}
+
+.column2-footer {
+    flex: 2;
+}
+
+.column2-footer ul li.items {
+    width: auto;
+    font-size: 10px;
+    margin: 0 70px;
+    text-align: center;
+    text-transform: uppercase;
+    order: 3;
+    padding-top: 20px;
+}
+
+.column3-footer {
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    margin-top: 20px;   
+}
+.column3-footer h6 {
+    margin-bottom: 10px;
+}
+.newsletter {
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.newsletter .btn {
+    padding: 5px 10px;
+    border-radius: 10px;
+    width: 20%;
+    border: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    color: #ffffff;
+    transition: ease-in-out .2s;
+}
+
+.newsletter .email {
+    width: 70%;
+    display: block;
+    width: 100%;
+    margin: 15px 0;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    }
+
+.newsletter .btn-d-block {
+    flex-direction: row;
+}
+
+.newsletter .btn-naranja {
+    background-color: var(--orange);
+}
+
+.btn-naranja:hover {
+    background-color: #db7a4d;
+}
+/* FOOTER */
+
+/* ADMIN */
+/* Admin login */
+.admin-login {
+    width: 100%;
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.admin-login form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #dddddd;
+    padding: 30px;
+    border-radius: 6px;
+    box-shadow: 0px 10px 20px 1px rgba(0,0,0,0.13);
+    transition: .5s;
+}
+
+.admin-login form:hover {
+    box-shadow: 0px 10px 20px 1px rgba(0,0,0,0.16);
+}
+
+.admin-login form img {
+    max-width: 130px;
+    margin: 0 auto 20px auto;
+    display: block;
+}
+
+.admin-login form .admin-login-email,
+.admin-login form .admin-login-password {
+    width: calc(100% - 28px);
+    margin-bottom: 25px;
+}
+
+.admin-login form input[type="text"],
+.admin-login form input[type="password"] {
+    width: calc(100% - 28px);
+    margin-left: 5px;
+    border: 2px solid transparent;
+    background-color: #eeeeee;
+    border-radius: 20px;
+    padding: 5px 10px;
+    transition: ease-in-out .4s;
+}
+
+.admin-login form input[type="text"]:focus,
+.admin-login form input[type="password"]:focus {
+    border-color: var(--orange);
+    outline: none;
+}
+
+.admin-login form div i {
+    font-size: 18px;
+    color: #5c5c5c;
+}
+
+.admin-login form input[type="submit"] {
+    padding: 10px 40px;
+    background-color: var(--orange);
+    color: #fff;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: ease-in-out .3s;
+}
+
+.admin-login form input[type="submit"]:hover {
+    border-color: #d8845d;
+}
+
+/* /Admin login/ */
+
+.admin-planes-alta form .titulo{
+    display: flex;
+    width: 50%;
+    margin: 15px 0;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+}
+.admin-planes-alta form .description {
+    display: flex;
+    width: 60%;
+    height: 150px;
+    resize: none;
+    margin: 15px 0;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.admin-planes-alta form input:last-of-type {
+    margin-bottom: 0;
+}
+
+.admin-planes-alta form input::placeholder {
+    color: #acacac;
+}
+
+.admin-planes-alta form input[type="submit"] {
+    color: #fff;
+    background-color: var(--orange);
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: ease-in-out .3s;
+}
+
+.admin-planes-alta form input[type="submit"]:hover {
+    transform: scale(1.1);
+}
+#image {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+.file-image {
+    position: relative;
+    display: inline-block;
+    font-size: 16px;
+    margin: 15px 0;
+    padding: 10px;
+    color: #acacac;
+    background-color: white;
+    border-radius: 8px;
+    text-align: center;
+    width: 30%;
+}
+
+form.recipe-update {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #e2e2e2;
+    border-radius: 10px;
+}
+
+form.recipe-update h1 {
+    flex-basis: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 22px;
+}
+
+form.recipe-update input {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px 15px;
+    border-radius: 0 5px 5px 0;
+    border: 1px solid #909090;
+    outline: none;
+    transition: .3s;
+    color: #393939;
+    font-size: 15px;
+    position: relative;
+}
+
+form.recipe-update span {
+    display: flex;
+    flex-basis: 100%;
+}
+
+form.recipe-update span i {
+    margin: auto 0;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #909090;
+    border-right: none;
+    border-radius: 5px 0 0 5px;
+    height: 42px;
+}
+
+form.recipe-update input#price {
+    width: 100%;
+}
+
+form.recipe-update input#preparation-time {
+    width: 100%;
+    margin-right: 10px;
+}
+
+form.recipe-update select#recipe-plan {
+    flex-basis: calc(33.3% - 10px);
+    margin: 10px 0 10px 10px;
+    border-radius: 5px;
+    padding: 10px 15px;
+    height: 40px;
+    outline: none;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+form.recipe-update textarea#preparation {
+    width: 100%;
+    height: 250px;
+    resize: none;
+    margin: 10px 0;
+    padding: 10px 15px;
+    border: 1px solid #909090;
+    border-radius: 5px;
+    color: #393939;
+    font-size: 15px;
+    outline: none;
+    transition: .3s;
+}
+
+form.recipe-update textarea#description {
+    width: 100%;
+    height: 250px;
+    resize: none;
+    margin: 10px 0;
+    padding: 10px 15px;
+    border: 1px solid #909090;
+    border-radius: 5px;
+    color: #393939;
+    font-size: 15px;
+    outline: none;
+    transition: .3s;
+}
+
+form.recipe-update textarea#pasos {
+    width: 100%;
+    height: 250px;
+    resize: none;
+    margin: 10px 0;
+    padding: 10px 15px;
+    border: 1px solid #909090;
+    border-radius: 5px;
+    color: #393939;
+    font-size: 15px;
+    outline: none;
+    transition: .3s;
+}
+form.recipe-update label.recipe-img {
+    flex-basis: 100%;
+    text-align: center;
+    position: relative;
+    padding: 10px 15px;
+    margin: 10px 0;
+    border: 1px solid #909090;
+    border-radius: 5px;
+    height: 40px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+form.recipe-update label.recipe-img:hover {
+    box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.2);
+}
+
+form.recipe-update .form-33 {
+    flex-basis: calc(33.3% - 10px);
+}
+
+form.recipe-update .form-33-medium {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+form.recipe-update label.recipe-img i {
+    margin-right: 10px;
+}
+
+form.recipe-update input.recipe-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+}
+
+.update-action-btns {
+    display: flex;
+    flex-basis: 100%;
+    max-width: 350px;
+    justify-content: space-between;
+    margin-left: auto;
+}
+
+form.recipe-update input[type="submit"] {
+    flex-basis: calc(50% - 20px);
+    background-color:#7cd07c;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+form.recipe-update .update-action-btns a {
+    flex-basis: calc(50% - 20px);
+    margin: 10px 0;
+    padding: 10px 15px;
+    text-align: center;
+    font-size: 15px;
+    background-color: #ff5656;
+    border-radius: 0 5px 5px 0;
+    border: 1px solid #909090;
+    color: #fff;
+    border-radius: 5px;
+    transition: .3s;
+}
+
+form.recipe-update input[type="submit"]:hover,
+form.recipe-update .update-action-btns a:hover {
+    box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.2);
+}
+
+form.recipe-update input[type="text"]:focus,
+form.recipe-update input[type="number"]:focus,
+form.recipe-update textarea#preparation:focus,
+form.recipe-update select#recipe-plan:focus {
+    border-color: #fff;
+    border-bottom: 3px solid var(--orange);
+    box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.2);
+}
+/*Recetas*/
+
+/*Lista Recetas*/
+/*JF*/
+
+.btn-modificar{
+    background-color: #77d35387;
+    font-size: 15px;
+}
+.btn-eliminar{
+    background-color: #F95F62;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+}
+.admin-nueva {
+    display: flex;
+    align-items: baseline;
+    flex-direction: row;
+    padding-left: 10%;
+}
+.admin-nueva-receta title{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.btn-nuevo{
+    background-color: #77D353;
+}
+.seleccion{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    color: var(--dark-grey);
+    background-color: white;
+    width: 90%;
+    margin: 15px 0;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+}
+.admin-botones{
+    display: flex;
+    align-items: baseline;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    width: 50%;
+    margin-left: 70%;
+}
+
+form.recipe-update input#crear {
+    color: #fff;
+    background-color: #77d35387;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: ease-in-out .3s;
+}
+form.recipe-update input#cancelar {
+    color: #fff;
+    background-color:#708293;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: ease-in-out .3s;
+}
+.admin-nueva-receta .btn-admin{
+    width: 100%;
+    color: var(--dark-blue);
+    font-weight: 700;
+    font-size: 17px;
+    text-align: center;
+}
+/*Recetas*/
+
+/*Users*/
+/*JF:ADMIN*/
+
+/*Alta y modificación de usuarios*/
+.btn-admin {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background-color: lightgrey;
+    color: var(--dark-blue);
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 16px;
+    border-radius: 8px;
+    padding: 10px 20px;
+    position: relative;
+    transition: ease-in-out .3s;
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 5%;
+}
+
+.btn-admin:hover {
+    transform: scale(1.1);
+}
+
+.btn-admin i {
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+}
+
+.btn-admin span {
+    font-weight: 600;
+}
+.btn-admin p {
+    margin-left: 5%;
+}
+
+/*Users*/
+
+/* ADMIN */
+
+
+@media (max-width: 425px) {
+    
+    /* HOMEPAGE Y PLANES */
+    .background {
+        height: 325px;
+    }
+
+    .slogan {
+        justify-content: center;
+        margin: auto;
+        background-color: transparent;
+    }
+
+    section ul li.title {
+        margin-top: 20px;
+        color: var(--dark-blue);
+        font-weight: 700;
+        font-size: 17px;
+        text-align: center;
+    }
+    
+    .background ul li.description {
+        display: none;
+    }
+
+    .btn-home {
+        font-size: 10px;
+        margin-top: 10px;
+    }
+
+
+    .home-planes{
+        margin: 30px;
+        display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    }
+
+    .box {
+        border-radius: 20px;
+        box-shadow: 0px 20px 34px -20px var(--dark-grey);
+        justify-content: center;
+        align-content: center;
+        margin-bottom: 15px;
+    }
+
+    .plan-home {
+        width: 80%;
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .box-full {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .box:first-child,
+    .box:last-child {
+        margin-left: 0;
+    }
+
+    .button {
+        font-size: 10px;
+    }
+
+    .instructive {
+        flex-direction: column;
+    }
+
+    .instructive ul.steps {
+        width: 70%;
+        margin: 10px 15%;
+    }
+
+    .instructive ul.steps:first-child {
+        margin-left: 15%;
+    }
+
+    /* HOMEPAGE Y PLANES */
+    
+    /* ADMIN LISTS */
+    main.admin-list .admin-item {
+        flex-wrap: wrap;
+    }
+
+    main.admin-list .admin-info {
+        margin: 0 auto;
+    }
+
+    main.admin-list .admin-actions {
+        margin: 10px auto 0 auto;
+    }
+    /* ADMIN LISTS */
+}
+
+@media (max-width: 768px) {
+    
+    /* HEADER */
+    .header-nav {
+        padding: 5px 30px;
+        border: none;
+    }
+
+    .header-nav ul li.items {
+        width: 100%;
+        display: none;
+    }
+
+    .header-nav ul li.items.show {
+        display: block;
+    }
+
+    .header-nav ul li.menu-btn {
+        display: block;
+    }
+
+    .header-nav ul li.user {
+        margin: 0 16px;
+        display: none;
+    }
+
+    .header-nav ul li.user.show {
+        display: block;
+    }
+    /* HEADER */
+
+
+    /* FOOTER */
+    .container-footer {
+        flex-direction: column;
+    }
+    /* FOOTER */
+
+    /* HOMEPAGE */
+    .slogan {
+        justify-content: center;
+        margin: auto;
+        background-color: transparent;
+    }
+
+    section ul li.title {
+        font-size: 15px;
+    }
+
+    section ul li.description {
+        font-size: 8px;
+    }
+
+    section ul li a {
+        font-size: 15px;
+    }
+
+    section main div ul li a {
+        margin: 5% 15%;
+        width: 70%;
+    }
+
+    section main div ul li.title {
+        font-size: 12px;
+    }
+
+    section main div ul li.description {
+        font-size: 8px;
+    }
+
+    section main div ul li a {
+        font-size: 10px;
+    }
+    
+    section .view-all a {
+        font-size: 10px;
+    }
+    /* HOMEPAGE */
+    /* ADMIN*/
+  
+    .btn-admin i{
+        margin-left: 20%;
+    }
+
+    .btn-admin p{
+        display: none;
+    }
+    /* ADMIN*/
+
+    /* CART */
+    .cart-header {
+        flex-direction: column;
+    }
+
+    .cart-titles,
+    main.cart input[type="submit"] {
+        margin: 10px auto;
+    }
+
+    .item-all-info,
+    .item-price {
+        width: 100%;
+    }
+
+    .item-price {
+        margin-top: 20px;
+    }
+    /* /CART/ */
+}
+
+@media (min-width: 768px) { /* FROM TABLET */
+      /* ADMIN*/
+    .btn-admin i{
+        margin-left: 20%;
+    }
+
+    .btn-admin p{
+        display: none;
+    }
+
+     /* ADMIN*/
+}
+
+@media (min-width: 1024px) { /* FROM DESKTOP */
+    /* Página de registro */
+    .register-container {
+        display: flex;
+    }
+
+    .register-page-title {
+        flex-basis: 60%;
+    }
+
+    .register-page-main {
+        flex-basis: 40%;
+    } 
+
+    .register-page-title h1,
+    .register-page-title h2 {
+        max-width: 60%;
+        letter-spacing: 1px;
+    }
+    /* /Página de registro */
+
+    /* Página de Login */
+    .login-container {
+        display: flex;
+    }
+
+    .login-page-title {
+        flex-basis: 60%;
+    }
+
+    .login-page-main {
+        flex-basis: 40%;
+    } 
+
+    .login-page-title h1,
+    .login-page-title h2 {
+        max-width: 60%;
+        letter-spacing: 1px;
+    }
+
+    /*Fin del Login*/
+
+    /* Carrito */
+    .foods-plans-container {
+        height: 80vh;
+        overflow-y: scroll;
+    }
+
+    .food-plan-container {
+        display: flex;
+    }
+
+    .food-plan-header {
+        margin-right: 25px;
+    }
+
+    .food-details {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .food-details h3 {
+        flex-basis: 100%;
+    }
+
+    .foods-info-container {
+        width: 100%;
+    }
+
+    .food-plan-header h2 {
+        margin: 15px 0;
+        font-size: 18px;
+    }
+
+    .food-plan-container img {
+        display: inline-block;
+        width: 200px;
+        height: 120px;
+        object-fit: cover;
+    }
+
+    .food-price p {
+        border-bottom: 1px solid var(--dark-grey);
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+    }
+
+    .food-price p:last-of-type {
+        border-bottom: none;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+
+    .cart-details-plans p {
+        font-size: 20px;
+    }
+
+    .cart-details-container h2 {
+        text-align: left;
+    }
+
+    /* /Carrito */
+
+    /*Admin*/
+    .btn-admin p{
+        display: block;
+        margin-left: 40%;
+    }
+    /*Admin*/
+}
